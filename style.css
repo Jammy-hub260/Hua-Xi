@@ -337,3 +337,44 @@ footer{
   background:#2b1e1a;
   color:#fff;
 }
+@media screen and (max-width:768px) {
+  header{
+    padding: 0,20px;
+    height: 70px;
+  }
+  nav a{
+    margin-left: 15px;
+    font-size: 14px;
+  }
+  .logo{
+    font-size: 22px;
+  }
+  .banner-content h1{
+    font-size: 38px;
+    letter-spacing: 4px;
+  }
+  .banner-content p{
+    font-size: 14px;
+    padding: 0 20px;
+  }
+  .about{
+    flex-direction: column;
+    padding: 80px 20px;
+  }
+  .about-img img{
+    width: 100%;
+  }
+  .product-list{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card{
+    width: 90%;
+  }
+  .color-list{
+    flex-wrap: wrap;
+  }
+  form{
+    width: 100%;
+  }
+}
