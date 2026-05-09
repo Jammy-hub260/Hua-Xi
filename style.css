@@ -1,0 +1,339 @@
+ *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"PingFang SC";
+  background:#f5f2ee;
+  color:#222;
+}
+
+/* 导航栏 */
+
+header{
+  width:100%;
+  height:80px;
+
+  padding:0 80px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  background:rgba(255,255,255,.75);
+
+  backdrop-filter:blur(10px);
+
+  z-index:999;
+}
+
+.logo{
+  font-size:30px;
+  letter-spacing:6px;
+  font-weight:bold;
+}
+
+nav a{
+  margin-left:40px;
+
+  text-decoration:none;
+  color:#222;
+
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0;
+  height:2px;
+
+  background:#6b4a3a;
+
+  transition:.4s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* banner */
+
+.banner{
+  width:100%;
+  height:100vh;
+
+  background:
+  url(images/banner.jpg)
+  center/cover no-repeat;
+
+  position:relative;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.banner-mask{
+  position:absolute;
+  inset:0;
+
+  background:rgba(0,0,0,.35);
+}
+
+.banner-content{
+  position:relative;
+  z-index:2;
+
+  text-align:center;
+  color:#fff;
+
+  opacity:0;
+  top:80px;
+}
+
+.banner-content h1{
+  font-size:72px;
+  letter-spacing:10px;
+}
+
+.banner-content p{
+  margin-top:25px;
+  font-size:20px;
+}
+
+.banner-content button{
+  margin-top:35px;
+
+  padding:14px 36px;
+
+  border:none;
+  border-radius:30px;
+
+  background:#fff;
+  color:#222;
+
+  cursor:pointer;
+
+  transition:.4s;
+}
+
+.banner-content button:hover{
+  transform:translateY(-5px);
+}
+
+/* 通用 */
+
+section{
+  padding:120px 80px;
+}
+
+section h2{
+  font-size:42px;
+  margin-bottom:50px;
+}
+
+/* about */
+
+.about{
+  display:flex;
+  align-items:center;
+  gap:70px;
+}
+
+.about-img img{
+  width:500px;
+  border-radius:10px;
+
+  transition:.5s;
+}
+
+.about-img img:hover{
+  transform:scale(1.03);
+}
+
+.about-text{
+  flex:1;
+}
+
+.about-text p{
+  margin-bottom:25px;
+
+  line-height:2;
+  color:#555;
+}
+
+/* products */
+
+.products{
+  background:#fff;
+}
+
+.tabs{
+  display:flex;
+  justify-content:center;
+
+  margin-bottom:60px;
+}
+
+.tab-btn{
+  margin:0 15px;
+
+  padding:12px 28px;
+
+  border:none;
+  border-radius:30px;
+
+  background:#ddd;
+
+  cursor:pointer;
+
+  transition:.4s;
+}
+
+.tab-btn.active{
+  background:#2b1e1a;
+  color:#fff;
+}
+
+.product-list{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+
+  position:relative;
+}
+
+.card{
+  width:300px;
+
+  background:#f8f8f8;
+
+  border-radius:10px;
+
+  overflow:hidden;
+
+  transition:.5s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:350px;
+
+  object-fit:cover;
+}
+
+.card h3{
+  padding:20px 20px 10px;
+}
+
+.card p{
+  padding:0 20px 20px;
+  color:#666;
+}
+
+/* 色卡 */
+
+.color-list{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+}
+
+.color-card{
+  text-align:center;
+}
+
+.color-block{
+  width:120px;
+  height:120px;
+
+  border-radius:12px;
+
+  margin-bottom:15px;
+
+  transition:.4s;
+}
+
+.color-block:hover{
+  transform:scale(1.1);
+}
+
+/* 下单 */
+
+.order{
+  background:#fff;
+}
+
+form{
+  width:500px;
+
+  margin:auto;
+
+  display:flex;
+  flex-direction:column;
+}
+
+form input,
+form select,
+form textarea{
+  margin-bottom:20px;
+
+  padding:15px;
+
+  border:none;
+  border-radius:10px;
+
+  background:#f2f2f2;
+}
+
+form textarea{
+  height:120px;
+  resize:none;
+}
+
+form button{
+  padding:15px;
+
+  border:none;
+  border-radius:10px;
+
+  background:#2b1e1a;
+  color:#fff;
+
+  cursor:pointer;
+
+  transition:.4s;
+}
+
+form button:hover{
+  opacity:.9;
+}
+
+/* footer */
+
+footer{
+  padding:40px;
+  text-align:center;
+  background:#2b1e1a;
+  color:#fff;
+}
